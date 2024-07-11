@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    transition: .2s linear;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root {
+    --main-color: #eb4d09;
+
+    --bg-color: #fff;
+
+    --secound-bg-color: #0d4930;
+
+    --text-color: #fff;
+
+    --secound-text-color: #0d4930;
+
+    --another-color:#f0ccbc;
+}
+
+.primary-text{
+    color: var(--text-color) !important;
+}
+.second-text{
+    color: var(--secound-text-color) !important;
+}
+.primary-bg{
+    background-color: var(--bg-color) !important;
+}
+.secondary-bg{
+    background-color: var(--secound-bg-color) !important;
+}
+.main-bg{
+    background-color: var(--main-color) !important;
+}
+.main-color{
+    color: var(--main-color) !important;
+}
+
+
+/* ------------------ sidebar start ----------------  */
+
+#overallDasboard{
+    overflow-x: hidden !important; 
+    overflow-y: hidden !important;
+    /* background: #ffffff !important; */
+}
+#mainDasboard{
+    min-width:100vw !important;
+    height: 100vh;
+}
+#sidebarDasboard{
+    height: 100vh;
+    margin-left: -230px;
+    transition: margin .5s ease-out !important;
+}
+
+#sidebarDasboard > .list-group{
+    width: 230px !important;
+}
+
+#overallDasboard.toggled #sidebarDasboard{
+    margin-left: 0 !important;
+}
+
+#sidebarDasboard > .sidebar-heading{
+    padding: 18px 20px !important;
+    font-size: 20px !important;
+}
+.span-color{
+    color: var(--main-color);
+}
+
+.fa-align-left{
+    cursor: pointer;
+}
+/* ------------scroll bars---------- */
+.details_area{
+    height: 90vh;
+    overflow-y:scroll !important;
+    overflow-x:scroll !important;
+}
+.details_area::-webkit-scrollbar{
+    width: 5px;   
+}
+.details_area::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+
+/* ------------scroll bars end---------- */
+
+.list-group-item{
+    border: none !important;
+    border-right:4px solid transparent  !important;
+    border-left:4px solid transparent  !important;
+    padding: 15px 30px !important;
+    transition: .2s;
+}
+
+.list-group-item:hover, .list-group-item.active{
+    border-right:4px solid var(--main-color) !important;
+    border-left:4px solid  var(--main-color) !important;
+    color: var(--main-color) !important; 
+    background-color: var(--another-color) !important;
+}
+.user-admin{
+    color: var(--main-color);
+}
+
+/* ------------------------------------------------------------------------- */
+/* dasboard and common table */
+
+thead tr th,tbody tr th,tbody tr td {
+    color: var(--secound-text-color) !important;
+    border-color:#0d4930 !important;
+    border-top:1px solid #0d4930 !important;
+}
+
+/* product and common table */
+.product_img {
+    border: 1px solid var(--main-color) !important;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 1px var(--main-color) !important;
+}
+
+/* -------------------------------------- View details ---------------------------*/
+    
+.card {
+    box-shadow: 0 0 5px 0px #000000;
+    border-radius: 35px !important;
+    border: none !important;
+    width: 17rem !important;
+}
+
+.card-top {
+    height: 250px !important;
+    border-radius: 35px 35px 0 35px !important;
+    background-color: var(--secound-bg-color);
+    overflow: hidden;
+}
+
+.card_heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    border-radius: 0 35px 0 35px !important;
+    color: var(--secound-text-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+}
+.card_heart:hover{
+    color: var(--main-color);
+}
+
+.card-top img {
+    height: 100% !important;
+    object-fit: contain !important;
+}
+
+.card-title {
+    font-size: 20px !important;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.prices>p {
+    margin-bottom: 0 !important;
+    pointer-events: none;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.old_price {
+    font-size: 14px;
+}
+
+.fa-share-nodes {
+    padding: 10px;
+    background-color: var(--secound-bg-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fa-share-nodes:hover{
+    background-color: var(--main-color);
+}
+
+.buy {
+    color: var(--secound-text-color) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.card-btn {
+    background-color: var(--secound-bg-color) !important;
+    color: var(--text-color) !important;
+    border-radius: 35px 0 35px 0 !important;
+}
+
+/* -------------------------------------- View details ---------------------------*/
+/* ------------------------------- Create file control ----------------------------------- */
+
+form{
+    border-radius: 10px !important;
+    background-color: var(--another-color);
+    width: 350px;
+    box-shadow: 0px 0px 5px 0px var(--secound-bg-color);
+}
+form > div .text_area{
+    color: var(--secound-text-color);
+    outline: none !important;
+    padding: 5px; 
+    width:100% ;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 1px solid var(--secound-text-color)!important;
+}
+form > div > label{
+    color: var(--secound-text-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.upload_img{
+    color: var(--secound-text-color) !important; 
+    box-shadow: none !important;
+    border: 1px solid var(--secound-bg-color)!important;
+
+}
+.submit_btn{
+    color: var(--text-color);
+    width: 100%;
+    border-radius: 5rem !important;
+    border-top-left-radius: 0 !important;
+    outline: none !important;
+    border: 1px solid var(--secound-bg-color) !important;
+    background-color: var(--secound-bg-color) !important;
+}
+.submit_btn:hover{
+    background-color: var(--main-color) !important;
+    border: 1px solid var(--main-color) !important;
+}
+/* -----------------------Create file control end------------------------------------------------------------------- */
+/* ------------scroll bars---------- */
+
+
+@media (min-width:768px){
+    #sidebarDasboard{
+        margin-left: 0 !important;
+    }
+
+    #mainDasboard{
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    
+    #overallDasboard.toggled #sidebarDasboard{
+        margin-left: -230px !important;
+    }
+}
+
+@media (max-width:425px){
+.card {
+    width: 15rem !important;
+}
+
+.card-top {
+    height: 250px !important;
+}
+
+}
